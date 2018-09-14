@@ -21,8 +21,9 @@ port = raw_input()
 
 
 # write tean token and failed string
-with open("exploit_all.py", "w+") as f:
-    f.write(re.sub(r'token = \".+\"', 'token="%s"' % (teamtoken), f.read()))
+with open("exploit_all.py", "a") as f:
+    content = f.read()
+    f.write(re.sub(r'token = \".+\"', 'token="%s"' % (teamtoken), content))
     pass
 
 
